@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "modern1";
+    src: url(Sk-Modernist-Bold.otf);
+  }
+
+  @font-face {
+    font-family: "modern2";
+    src: url(Sk-Modernist-Regular.otf);
+  }
+}
+
+.list {
+  @apply flex flex-row gap-1 items-center;
+}
+
+.row-col {
+  @apply bg-secondary/10 p-8 rounded-sm;
+}
+
+.font-modern1 {
+  font-family: "modern1";
+}
+
+.btn-1 {
+  @apply py-2 px-7 rounded-sm text-base bg-secondary text-color2 hover:bg-secondary/50 transition-all duration-300 ease-linear  inline;
+}
+
+.btn-2 {
+  @apply py-1 px-8 rounded-sm text-base bg-transparent;
+}
+
+.main-w {
+  @apply max-w-[1400px] mx-auto lg:px-8 md:px-7 px-4 sm:px-6 xs:px-5;
+}
+
+@layer base {
+  h1 {
+    @apply text-7xl;
+  }
+  h2 {
+    @apply text-6xl;
+  }
+
+  h3 {
+    @apply text-5xl;
+  }
+
+  h4 {
+    @apply text-4xl;
+  }
+
+  h5 {
+    @apply text-3xl;
+  }
+
+  h6 {
+    @apply text-2xl;
+  }
+
+  p {
+    @apply text-xl;
+  }
+
+  a {
+    font-family: "modern2";
+    font-weight: 600;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "modern1";
+}
+
+p {
+  font-family: "modern2";
+}
+
+main {
+  background-image: url(bg.png);
+  object-fit: cover;
+}
+
+@media (max-width: 425px) {
+  .h1-lang {
+    @apply text-4xl;
+  }
+
+  h3{
+    @apply text-4xl;
+  }
+
+  .tt-1 p{
+    @apply text-sm;
+  }
+
+  .second-t p{
+    @apply text-base;
+  }
+}
+
+@media (max-width: 625px) {
+  .about-wrapper {
+    padding: 2rem;
+  }
+}
+
+
+@media (max-width: 415px) {
+  .row-col {
+    padding: 1rem !important;
+  }
+}
